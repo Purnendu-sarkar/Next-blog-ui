@@ -15,7 +15,7 @@ export default async function BlogDetailsCard({ blog }: { blog: any }) {
       <div className="flex items-center gap-4 mb-8">
         <Image
           src={
-            blog.author.picture ||
+            blog.author?.picture ||
             "https://cdn-icons-png.flaticon.com/512/9385/9385289.png"
           }
           alt={blog?.author?.name}
@@ -25,8 +25,8 @@ export default async function BlogDetailsCard({ blog }: { blog: any }) {
         />
         <div>
           <p className="font-semibold">
-            {blog.author.name}{" "}
-            {blog.author.isVerified && (
+            {blog.author?.name}{" "}
+            {blog.author?.isVerified && (
               <span className="inline-block ml-1 text-blue-500">✔</span>
             )}
           </p>
