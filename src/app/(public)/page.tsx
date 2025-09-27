@@ -10,7 +10,7 @@ export default async function HomePage() {
   });
   const result = await res.json();
   const blogs = Array.isArray(result.data?.data) ? result.data.data : [];
-  console.log(blogs);
+  // console.log(blogs);
 
   return (
     <div>
